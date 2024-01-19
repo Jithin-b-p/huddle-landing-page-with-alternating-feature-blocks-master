@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../font/OpenSansBold.woff2") format("woff2"), url("../font/OpenSansBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../font/OpenSansRegular.woff2") format("woff2"), url("../font/OpenSansRegular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../font/PoppinsSemiBold.woff2") format("woff2"), url("../font/PoppinsSemiBold.woff") format("woff");
+  font-display: swap;
+}
+:root {
+  --fallback: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ff-heading: "Poppins", var(--fallback);
+  --ff-body: "Open Sans", var(--fallback);
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --clr-dark-cyan: 192, 100%, 9%;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: 400;
+}
+
+main {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-semi-bold);
+  font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+  line-height: 1.5;
+  color: hsl(var(--clr-dark-cyan));
+}
+
+body {
+  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  font-weight: var(--fw-regular);
+}
+
+.btn {
+  font-size: 0.845rem;
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+.btn--primary {
+  padding-block: clamp(0.6875rem, 0.6786rem + 0.0446vw, 0.75rem);
+  padding-inline: clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
+  background-color: #fff;
+}
+@media only screen and (max-width: 40rem) {
+  .btn--primary {
+    font-size: 0.65rem;
+    padding-block: 0.3rem;
+    padding-inline: 1.4rem;
+  }
+}
+.btn--secondary {
+  padding-block: clamp(0.6875rem, 0.6786rem + 0.0446vw, 0.75rem);
+  padding-inline: clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
+  color: #fff;
+  background-color: hsl(322, 100%, 66%);
+}
+@media only screen and (max-width: 40rem) {
+  .btn--secondary {
+    font-size: 0.75rem;
+    padding-block: 0.7rem;
+    padding-inline: 3.8rem;
+  }
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+.hero {
+  padding-block-start: clamp(8.3rem, 7.7014rem + 2.554vw, 10rem);
+  padding-block-end: 3rem;
+  padding-inline: clamp(2.375rem, 1.4507rem + 3.9437vw, 5rem);
+  text-align: center;
+  background-color: hsl(193, 100%, 96%);
+  background-image: url(../images/bg-hero-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+}
+@media only screen and (max-width: 56.125em) {
+  .hero .btn {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 56.125em) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 0;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .hero {
+    margin: 0 auto;
+  }
+}
+.hero__details {
+  flex-basis: 41%;
+}
+.hero__img {
+  flex-basis: 55%;
+}
+.hero__summary {
+  padding-block: clamp(1rem, 0.8571rem + 0.7143vw, 2rem);
+}
+@media only screen and (max-width: 56.125em) {
+  .hero__summary {
+    padding-block-end: 2.2rem;
+  }
+}
+
+.header {
+  max-width: 90rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding-block: 3rem;
+  padding-inline: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+}
+@media only screen and (max-width: 40rem) {
+  .header {
+    padding-inline: 1rem;
+    padding-block: 1.4rem;
+  }
+}
+.header__logo {
+  width: 12rem;
+}
+@media only screen and (max-width: 40rem) {
+  .header__logo {
+    width: 6.5rem;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvYWJzdHJhY3RzL19mb250LnNjc3MiLCJzdHlsZS5jb21wLmNzcyIsIi4uL3Nhc3MvYWJzdHJhY3RzL192YXJpYWJsZXMuc2NzcyIsIi4uL3Nhc3MvYmFzZS9fYmFzZS5zY3NzIiwiLi4vc2Fzcy9iYXNlL19yZXNldC5zY3NzIiwiLi4vc2Fzcy9iYXNlL190eXBvZ3JhcGh5LnNjc3MiLCIuLi9zYXNzL2NvbXBvbmVudHMvX2J1dHRvbnMuc2NzcyIsIi4uL3Nhc3MvcGFnZXMvX2hvbWUuc2NzcyIsIi4uL3Nhc3MvYWJzdHJhY3RzL19taXhpbnMuc2NzcyIsIi4uL3Nhc3MvbGF5b3V0L19oZWFkZXIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHdCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLHVHQUFBO0VBRUEsa0JBQUE7QUNBRjtBREdBO0VBQ0Usd0JBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0VBQ0EsNkdBQUE7RUFFQSxrQkFBQTtBQ0ZGO0FESUE7RUFDRSxzQkFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSw2R0FBQTtFQUVBLGtCQUFBO0FDSEY7QUNwQkE7RUFFRTt3RUFBQTtFQUVBLHdDQUFBO0VBQ0EsdUNBQUE7RUFHQSxpQkFBQTtFQUNBLG1CQUFBO0VBQ0EsY0FBQTtFQUdBLDhCQUFBO0FEaUJGOztBRTlCQTtFQUNFLDJCQUFBO0VBQ0EsZ0JBQUE7QUZpQ0Y7O0FFOUJBO0VBQ0UsZ0JBQUE7RUFDQSxjQUFBO0FGaUNGOztBR3hDQSxxQkFBQTtBQUNBOzs7RUFHRSxzQkFBQTtBSDJDRjs7QUd4Q0EsZ0NBQUE7QUFDQTtFQUNFLDJCQUFBO0VBQ0EsOEJBQUE7RUFDQSxzQkFBQTtBSDJDRjs7QUd4Q0Esc0VBQUE7QUFDQTs7Ozs7Ozs7OztFQVVFLFNBQUE7QUgyQ0Y7O0FHeENBLDJHQUFBO0FBQ0E7O0VBRUUsZ0JBQUE7QUgyQ0Y7O0FHeENBLDJCQUFBO0FBQ0E7RUFDRSxpQkFBQTtFQUNBLGdCQUFBO0FIMkNGOztBR3hDQSxrRUFBQTtBQUNBOzs7Ozs7O0VBT0UsZ0JBQUE7QUgyQ0Y7O0FHeENBLHNDQUFBO0FBQ0E7Ozs7RUFJRSxrQkFBQTtBSDJDRjs7QUd4Q0EsMERBQUE7QUFDQTtFQUNFLGlDQUFBO1VBQUEsOEJBQUE7RUFDQSxtQkFBQTtBSDJDRjs7QUd4Q0Esb0NBQUE7QUFDQTs7RUFFRSxlQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxjQUFBO0FIMkNGOztBR3hDQSx5Q0FBQTtBQUNBOzs7O0VBSUUsYUFBQTtBSDJDRjs7QUd4Q0EsOERBQUE7QUFDQTtFQUNFLGdCQUFBO0FIMkNGOztBR3hDQSx1RUFBQTtBQUNBO0VBQ0Usd0JBQUE7QUgyQ0Y7O0FJbklBOztFQUVFLDhCQUFBO0VBQ0EsZ0NBQUE7RUFDQSxzREFBQTtFQUVBLGdCQUFBO0VBQ0EsZ0NBQUE7QUpxSUY7O0FJbElBO0VBR0UscURBQUE7RUFDQSw4QkFBQTtBSm1JRjs7QUtsSkE7RUFDRSxtQkFBQTtFQUNBLDJCQUFBO0VBQ0EscUJBQUE7RUFDQSxZQUFBO0VBQ0EsY0FBQTtFQUNBLGVBQUE7RUFDQSxtQkFBQTtBTHFKRjtBS25KRTtFQUVFLDhEQUFBO0VBRUEsNkRBQUE7RUFDQSxzQkFBQTtBTG1KSjtBS2pKSTtFQVBGO0lBUUksa0JBQUE7SUFDQSxxQkFBQTtJQUNBLHNCQUFBO0VMb0pKO0FBQ0Y7QUtqSkU7RUFHRSw4REFBQTtFQUNBLDZEQUFBO0VBQ0EsV0FBQTtFQUNBLHFDQUFBO0FMaUpKO0FLL0lJO0VBUkY7SUFTSSxrQkFBQTtJQUNBLHFCQUFBO0lBQ0Esc0JBQUE7RUxrSko7QUFDRjs7QUs5SUE7RUFDRSxxQkFBQTtBTGlKRjs7QU16TEE7RUFFRSw4REFBQTtFQUNBLHVCQUFBO0VBRUEsMkRBQUE7RUFFQSxrQkFBQTtFQUNBLHFDQUFBO0VBRUEsb0RBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0VBRUEsa0JBQUE7RUFDQSxXQUFBO0VDZEEsYUFBQTtFQUNBLHNCRGVjO0VBQ2QsOEJBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0FOdUxGO0FNckxFO0VBQ0U7SUFDRSxjQUFBO0VOdUxKO0FBQ0Y7QU1yTEU7RUE1QkY7SUNDRSxhQUFBO0lBQ0EsbUJEMkJnQjtJQUNkLGdCQUFBO0lBQ0EsTUFBQTtFTnlMRjtBQUNGO0FNeExFO0VBakNGO0lBa0NJLGNBQUE7RU4yTEY7QUFDRjtBTXpMRTtFQUNFLGVBQUE7QU4yTEo7QU14TEU7RUFDRSxlQUFBO0FOMExKO0FNdkxFO0VBRUUsc0RBQUE7QU53TEo7QU10TEk7RUFKRjtJQUtJLHlCQUFBO0VOeUxKO0FBQ0Y7O0FRNU9BO0VBQ0UsZ0JBQUE7RUFDQSxTQUFBO0VBQ0EsMkJBQUE7RURGQSxhQUFBO0VBQ0EsbUJBRnNCO0VDTXRCLDhCQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFFQSxtQkFBQTtFQUNBLHVEQUFBO0FSOE9GO0FRNU9FO0VBZEY7SUFlSSxvQkFBQTtJQUNBLHFCQUFBO0VSK09GO0FBQ0Y7QVE3T0U7RUFDRSxZQUFBO0FSK09KO0FRN09JO0VBSEY7SUFJSSxhQUFBO0VSZ1BKO0FBQ0YiLCJmaWxlIjoic3R5bGUucHJlZml4LmNzcyJ9 */

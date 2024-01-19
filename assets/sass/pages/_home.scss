@@ -1,0 +1,54 @@
+.hero {
+  // padding-block-start: 10rem;
+  padding-block-start: clamp(8.3rem, 7.7014rem + 2.554vw, 10rem);
+  padding-block-end: 3rem;
+  // padding-inline: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+  padding-inline: clamp(2.375rem, 1.4507rem + 3.9437vw, 5rem);
+
+  text-align: center;
+  background-color: hsl(193, 100%, 96%);
+  // background-color: red;
+  background-image: url(../images/bg-hero-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // min-height: 76svh;
+  position: relative;
+  z-index: -1;
+
+  @include flex(column);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+
+  @media only screen and (max-width: 56.125em) {
+    & .btn {
+      margin: 0 auto;
+    }
+  }
+  @media only screen and (min-width: 56.125em) {
+    @include flex(row);
+    text-align: left;
+    gap: 0;
+  }
+  @media only screen and (min-width: 90em) {
+    margin: 0 auto;
+  }
+
+  &__details {
+    flex-basis: 41%;
+  }
+
+  &__img {
+    flex-basis: 55%;
+  }
+
+  &__summary {
+    // padding-block: 2rem;
+    padding-block: clamp(1rem, 0.8571rem + 0.7143vw, 2rem);
+
+    @media only screen and (max-width: 56.125em) {
+      padding-block-end: 2.2rem;
+    }
+  }
+}

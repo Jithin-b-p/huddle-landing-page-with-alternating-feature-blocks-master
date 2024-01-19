@@ -1,0 +1,27 @@
+.header {
+  max-width: 90rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+
+  padding-block: 3rem;
+  padding-inline: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+
+  @media only screen and (max-width: 40rem) {
+    padding-inline: 1rem;
+    padding-block: 1.4rem;
+  }
+
+  &__logo {
+    width: 12rem;
+
+    @media only screen and (max-width: 40rem) {
+      width: 6.5rem;
+    }
+  }
+}

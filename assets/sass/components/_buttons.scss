@@ -1,0 +1,42 @@
+.btn {
+  font-size: 0.845rem;
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+  border-radius: 2rem;
+
+  &--primary {
+    // padding-block: 0.8rem;
+    padding-block: clamp(0.6875rem, 0.6786rem + 0.0446vw, 0.75rem);
+    // padding-inline: 4rem;
+    padding-inline: clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
+    background-color: #fff;
+
+    @media only screen and (max-width: 40rem) {
+      font-size: 0.65rem;
+      padding-block: 0.3rem;
+      padding-inline: 1.4rem;
+    }
+  }
+
+  &--secondary {
+    // padding-block: 1rem;
+    // padding-inline: 4.5rem;
+    padding-block: clamp(0.6875rem, 0.6786rem + 0.0446vw, 0.75rem);
+    padding-inline: clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
+    color: #fff;
+    background-color: hsl(322, 100%, 66%);
+
+    @media only screen and (max-width: 40rem) {
+      font-size: 0.75rem;
+      padding-block: 0.7rem;
+      padding-inline: 3.8rem;
+    }
+  }
+}
+
+.btn a {
+  text-decoration: none;
+}
