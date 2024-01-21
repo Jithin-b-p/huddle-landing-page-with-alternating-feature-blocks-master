@@ -1,0 +1,19 @@
+.cta {
+  position: absolute;
+  left: 50%;
+  bottom: -2.5%;
+
+  width: min(95%, 50rem);
+  padding-block: 3rem;
+
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: var(--clr-white);
+
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem hsl(var(--clr-greyish-blue), 0.2);
+  transform: translateX(-50%);
+}

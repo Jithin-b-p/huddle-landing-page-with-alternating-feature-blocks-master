@@ -1,42 +1,62 @@
 .btn {
+  display: block;
   font-size: 0.845rem;
   font-weight: var(--fw-bold);
   text-decoration: none;
   border: none;
-  display: block;
+  border-radius: 40rem;
+  transition: all 0.3s;
   cursor: pointer;
-  border-radius: 2rem;
+
+  &:focus,
+  &:focus-within {
+    outline: 5px dotted lightseagreen;
+  }
 
   &--primary {
-    // padding-block: 0.8rem;
-    padding-block: clamp(0.6875rem, 0.6786rem + 0.0446vw, 0.75rem);
-    // padding-inline: 4rem;
-    padding-inline: clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
-    background-color: #fff;
+    padding: clamp(0.6875rem, 0.6786rem + 0.0446vw, 0.75rem)
+      clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
+    background-color: var(--clr-white);
+    box-shadow: 0 0.1rem 0.4rem hsl(var(--clr-greyish-blue), 0.3);
 
     @media only screen and (max-width: 40rem) {
       font-size: 0.65rem;
       padding-block: 0.3rem;
       padding-inline: 1.4rem;
     }
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+      color: #7e858f;
+    }
   }
 
   &--secondary {
-    // padding-block: 1rem;
-    // padding-inline: 4.5rem;
-    padding-block: clamp(0.6875rem, 0.6786rem + 0.0446vw, 0.75rem);
-    padding-inline: clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
-    color: #fff;
-    background-color: hsl(322, 100%, 66%);
+    padding: clamp(0.7rem, 0.5239rem + 0.7512vw, 1.2rem)
+      clamp(3.8rem, 3.5535rem + 1.0516vw, 4.5rem);
+    color: var(--clr-white);
+    background-color: #ad006d;
+    box-shadow: 0 0.2rem 1rem hsl(var(--clr-greyish-blue), 0.5);
 
     @media only screen and (max-width: 40rem) {
       font-size: 0.75rem;
-      padding-block: 0.7rem;
-      padding-inline: 3.8rem;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+      filter: brightness(1.75);
     }
   }
 }
 
 .btn a {
   text-decoration: none;
+}
+
+.cta .btn {
+  padding: clamp(0.8rem, 0.6239rem + 0.7512vw, 1.3rem)
+    clamp(3rem, 1.7676rem + 5.2582vw, 6.5rem);
+  font-size: clamp(0.652rem, 0.459rem + 0.8233vw, 1.2rem);
 }

@@ -9,12 +9,11 @@
   position: absolute;
   width: 100%;
 
-  padding-block: 3rem;
-  padding-inline: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+  padding: 3rem clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+  z-index: 10;
 
   @media only screen and (max-width: 40rem) {
-    padding-inline: 1rem;
-    padding-block: 1.4rem;
+    padding: 1.4rem 1rem;
   }
 
   &__logo {

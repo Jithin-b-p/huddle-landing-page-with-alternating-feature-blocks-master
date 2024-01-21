@@ -1,9 +1,25 @@
 body {
   font-family: var(--ff-body);
   font-weight: 400;
+  background-color: #f2f2f2;
 }
 
 main {
+  position: relative;
   max-width: 90rem;
-  margin: 0 auto;
+  margin-inline: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer {
+  max-width: 90rem;
+  margin-inline: auto;
 }

@@ -29,8 +29,9 @@
           alt="logo of the company"
         />
       </div>
-
-      <button class="btn btn--primary"><a href="#">Try It Free</a></button>
+      <a href="#" tabindex="-1">
+        <button class="btn btn--primary">Try It Free</button>
+      </a>
     </header>
 
     <main>
@@ -43,9 +44,9 @@
             but so does your audience. Create connections with your users as you
             engage in genuine discussion.
           </p>
-          <button class="btn btn--secondary">
-            <a href="#">Get Started For Free</a>
-          </button>
+          <a href="#" tabindex="-1">
+            <button class="btn btn--secondary">Get Started For Free</button>
+          </a>
         </div>
 
         <div class="hero__img">
@@ -61,19 +62,160 @@
 
       <!-- send of hero section -->
       <!-- start of feature section -->
-      <section class="feature"></section>
+      <section class="feature-section">
+        <!-- feature -> grow together -->
+        <div class="feature">
+          <div class="feature__img">
+            <img
+              src="./assets/images/illustration-grow-together.svg"
+              alt=""
+              width="1023.46"
+              height="837.84"
+              aria-hidden="true"
+            />
+          </div>
+
+          <!-- details about the feature including heading and summary -->
+          <div class="feature__details">
+            <h2 class="feature__heading">Grow Together</h2>
+            <p class="feature__summary">
+              Generate meaningful discussions with your audience and build a
+              strong, loyal community. Think of the insightful conversations you
+              miss out on with a feedback form.
+            </p>
+          </div>
+        </div>
+
+        <!-- feature flowing coversations -->
+        <div class="feature even-feature">
+          <div class="feature__img">
+            <img
+              src="./assets/images/illustration-flowing-conversation.svg"
+              alt=""
+              width="1125.12"
+              height="800.94"
+              aria-hidden="true"
+            />
+          </div>
+
+          <!-- details about the feature including heading and summary -->
+          <div class="feature__details">
+            <h2 class="feature__heading">Flowing Conversations</h2>
+            <p class="feature__summary">
+              You wouldn't paginate a conversation in real life, so why do it
+              online? Our threads have just-in-time loading for a more natural
+              flow.
+            </p>
+          </div>
+        </div>
+
+        <!-- feature your users-->
+        <div class="feature">
+          <div class="feature__img">
+            <img
+              src="./assets/images/illustration-your-users.svg"
+              alt=""
+              width="1077.87"
+              height="813.02"
+              aria-hidden="true"
+            />
+          </div>
+
+          <!-- details about the feature including heading and summary -->
+          <div class="feature__details">
+            <h2 class="feature__heading">Your Users</h2>
+            <p class="feature__summary">
+              It takes no time at all to integrate Huddle with your app's
+              authentication solution. This means, once signed in to your app,
+              your users can start chatting immediately.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- end of feature section -->
+
+      <section class="cta">
+        <h2 class="cta__heading">Ready To Build Your Community?</h2>
+        <a href="#" tabindex="-1">
+          <button class="btn btn--secondary">Get Started For Free</button>
+        </a>
+      </section>
     </main>
-    <!-- Grow Together Generate meaningful discussions with your audience and build a
-    strong, loyal community. Think of the insightful conversations you miss out
-    on with a feedback form. Flowing Conversations You wouldn't paginate a
-    conversation in real life, so why do it online? Our threads have
-    just-in-time loading for a more natural flow. Your Users It takes no time at
-    all to integrate Huddle with your app's authentication solution. This means,
-    once signed in to your app, your users can start chatting immediately. Ready
-    To Build Your Community? Get Started For Free Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua +1-543-123-4567 example@huddle.com About Us What We Do
-    FAQ Career Blog Contact Us &copy; Copyright 2018 Huddle. All rights
-    reserved. -->
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer__logo">
+        <img
+          src="./assets/images/logo-footer.svg"
+          width="240"
+          height="39"
+          alt="huddle logo"
+        />
+      </div>
+
+      <div class="footer__navigation">
+        <address class="footer__contact">
+          <p class="contact__location">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </p>
+
+          <a class="contact__phone" href="tel:+1-543-123-4567"
+            >+1-543-123-4567</a
+          >
+
+          <a class="contact__email" href="mailto:example@fylo.com">
+            example@fylo.com
+          </a>
+        </address>
+
+        <section class="footer__nav-list">
+          <ul role="list" class="navigation__list">
+            <li class="nav__list-item"><a href="#">About Us</a></li>
+            <li class="nav__list-item"><a href="#">What We Do</a></li>
+            <li class="nav__list-item"><a href="#">FAQ</a></li>
+            <li class="nav__list-item"><a href="#">Career</a></li>
+            <li class="nav__list-item"><a href="#">Blog</a></li>
+            <li class="nav__list-item"><a href="#">Contact Us</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__social">
+          <ul role="list">
+            <li>
+              <a href="#" aria-label="facebook link"
+                ><svg>
+                  <use
+                    xlink:href="./assets/images/social-sprite.svg#facebook"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="twitter link"
+                ><svg>
+                  <use
+                    xlink:href="./assets/images/social-sprite.svg#twitter"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="instagram link"
+                ><svg>
+                  <use
+                    xlink:href="./assets/images/social-sprite.svg#instagram"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <section class="footer__copyright">
+            <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
+          </section>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
